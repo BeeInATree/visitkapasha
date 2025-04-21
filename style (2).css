@@ -1,0 +1,204 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.page {
+    background-color: gray
+}
+
+/*Header*/
+
+.header {
+    display: flex;
+    background-color: aqua;
+    justify-content: space-between;
+}
+
+.header__title {
+    font-size: 3.5rem;
+    margin: 15px 0px 15px 15px;
+}
+
+.header__nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+}
+
+.header__item {
+    margin: 0px 15px;
+    font-size: 1.5rem;
+}
+
+.Header__link {
+    color: black;
+}
+
+
+/*About*/
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 30px;
+}
+
+.about__image {
+    width: 300px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.about__info {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.about__title {
+    font-size: 2rem;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.about__item {
+    margin: 10px auto;
+    font-weight: 700;
+}
+
+.about__item-value {
+    font-weight: 400;
+}
+
+
+/* projects */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.card-container {
+    perspective: 1000px
+}
+.card {
+    width: 250px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 15px;
+}
+
+.front {
+    background-color: rgb(37, 29, 150);
+}
+
+.back {
+    background-color: rgb(236, 3, 3);
+    transform: rotateY(180deg);
+}
+
+.front-image {
+    width: 100%;
+    height: 100%;
+}
+
+/* contacts */
+
+.contacts {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contacts-form {
+    margin-left: 100px;
+}
+
+.contacts-self {
+    margin-right: 100px;
+}
+
+.form-input {
+    border: 1px solid darkslategray;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.form-button {
+    border-radius: 10px;
+    height: 30px;
+    border: none;
+}
+
+.form-input:valid {
+    border-color: lime
+}
+
+.form-input:invalid {
+    border-color: red;
+}
+
+.contacts-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contacts-item {
+    font-size: 20px;
+    display: flex;
+    height: 40px;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.contacts-item:hover {
+    background-color: darkslategray;
+}
+
+.contacts-name {
+    font-weight: 700;
+}
+
+.contacts-link {
+    color: black;
+}
+
+.contacts-list {
+    border: 5px;
+}
